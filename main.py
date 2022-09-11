@@ -162,7 +162,7 @@ class CalculatorFrame(ttk.Frame):
                 self.expression = self.expression[:-1]
             elif '.' in self.txt_input:                 # No multiple '.' in a number (ex: 22.3.2 is not valid)
                 return
-        elif self.expression == '' and exp == '0':        # Remove any leading zero (012 is invalid. It should be 12)
+        elif self.expression == '' and exp == '0':      # Remove any leading zero (012 is invalid. It should be 12)
             self.display_txt.set('0')
             self.txt_input = ''
             return
