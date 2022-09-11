@@ -223,7 +223,7 @@ class CalculatorFrame(ttk.Frame):
             elif operator == '\u00D7':
                 operator = '*'
             if self.expression and self.expression[-1] in ['+', '-', '/', '*', '%']:
-                # No two operators should be together
+                # No two operators should be together. Remove the last operator from expression
                 self.expression = self.expression[:-1]
             elif not self.expression:  # If expression is empty and any operator pressed then do nothing
                 return
